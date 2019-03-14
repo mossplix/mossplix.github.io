@@ -2,37 +2,26 @@
 
 module.exports = {
   url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Moses Mugisha',
+  subtitle: 'Software Engineer, Machine Learning, GIS, Android  with nearly 10 years of tech industry experience',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-160728420-1',
   menu: [
     {
       label: 'Articles',
       path: '/'
-    },
-    {
-      label: 'About me',
-      path: '/pages/about'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
-    photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    name: 'Moses Mugisha',
+    photo: '/me2.jpeg',
+    bio: 'Programmer, Machine Learning Engineer with nearly 10 years of tech industry experience',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'mossplix@ggmail.com',
+      twitter: 'https://twitter.com/mossplix',
+      github: 'https://github.com/mossplix',
     }
   }
 };
