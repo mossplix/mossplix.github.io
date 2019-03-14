@@ -177,15 +177,15 @@ Same as the preceding example, but the result is written into the variable a.
 Note: foreach and print statements cannot be subelement of element union.
 
 
-  (
-  node
-    [amenity=drinking_water]
-    (47.06,15.42,47.09,15.48);
-  node
-    [tourism=hotel]
-    (47.06,15.42,47.09,15.48);
-  );
-  out;
+    (
+    node
+      [amenity=drinking_water]
+      (47.06,15.42,47.09,15.48);
+    node
+      [tourism=hotel]
+      (47.06,15.42,47.09,15.48);
+    );
+    out;
 
 
 
@@ -217,12 +217,12 @@ Note: Subsequent statements in a union statement are not impacted by the item st
 The item statement can also be used as filter.
 
 
-  node[amenity=bank]
-    (47.06,15.42,47.09,15.48);
-  )->.bank_set;
+    node[amenity=bank]
+      (47.06,15.42,47.09,15.48);
+    )->.bank_set;
 
-  //here we print the bank_set by passing the .bank_set query
-  .bank_set out;
+    //here we print the bank_set by passing the .bank_set query
+    .bank_set out;
 
 
 
@@ -256,52 +256,52 @@ The attribute "geom" can be followed by a bounding box in the format "(south,wes
 - a non-negative integer for the maximum number of elements to print. Default is no limit.
 
 
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    node[name=Corcovado][natural=peak];
-    >;
-  );
-  out;
-  ===meta===
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    node[name=Corcovado][natural=peak];
-    >;
-  );
-  out meta;
-  ===bounding box===
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    way(141708228);
-    >;
-  );
-  out bb;
-  ===limit===
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    way(141708228);
-    >;
-  );
-  // only print 20 nodes from the way 
-  out 20;
-  ===center===
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    way(141708228);
-    >;
-  );
-  // print center (not centroid) of the polygon
-  out center;
-  ===combination===
-  (
-    // Rio de Janeiro's Christ the Redeemer peak
-    way(141708228);
-    >;
-  );
-  // print multiple times using different modifiers
-  out geom;
-  out center;
-  out bb;
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      node[name=Corcovado][natural=peak];
+      >;
+    );
+    out;
+    ===meta===
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      node[name=Corcovado][natural=peak];
+      >;
+    );
+    out meta;
+    ===bounding box===
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      way(141708228);
+      >;
+    );
+    out bb;
+    ===limit===
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      way(141708228);
+      >;
+    );
+    // only print 20 nodes from the way 
+    out 20;
+    ===center===
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      way(141708228);
+      >;
+    );
+    // print center (not centroid) of the polygon
+    out center;
+    ===combination===
+    (
+      // Rio de Janeiro's Christ the Redeemer peak
+      way(141708228);
+      >;
+    );
+    // print multiple times using different modifiers
+    out geom;
+    out center;
+    out bb;
 
 
 
@@ -327,29 +327,29 @@ out;
 The id-query filter selects the element of given type with given id.
 
 
-  // get node with id 1170494282
-  // put it (implicitly) in the default set
-  node(1170494282);
-  // print the default set
-  out;
+    // get node with id 1170494282
+    // put it (implicitly) in the default set
+    node(1170494282);
+    // print the default set
+    out;
 
 
 ## By area (area)
 
 The area filter selects all elements of the chosen type that are inside the given area.
 
-  // search the area of the Dolmites
-  area
-    [place=region]
-    ["region:type"="mountain_area"]
-    ["name:en"="Dolomites"];
-  out body;
+    // search the area of the Dolmites
+    area
+      [place=region]
+      ["region:type"="mountain_area"]
+      ["name:en"="Dolomites"];
+    out body;
 
-  // get all peaks in the area
-  node
-    [natural=peak]
-    (area);
-  out body qt;
+    // get all peaks in the area
+    node
+      [natural=peak]
+      (area);
+    out body qt;
 
 
 
@@ -358,7 +358,7 @@ The area filter selects all elements of the chosen type that are inside the give
 The has-kv filter selects all elements that have or have not a tag with a certain value. It supports the basic OSM types node, way, and relation as well as the extended type area.
 
 
-   node["name"~"^Foo$"];    /* finds exactly "Foo" */
+    node["name"~"^Foo$"];    /* finds exactly "Foo" */
     node["name"~"^Foo"];     /* finds anything that starts with "Foo" */
     node["name"~"Foo$"];     /* finds anything that ends with "Foo" */
     node["name"~"Foo"];      /* finds anything that contains the substring "Foo" */
@@ -378,11 +378,11 @@ Example: All changes since the given date and now
 
 Another Example:
 
-  (node(poly:"50.73 7.13 50.73 7.17 50.75 7.15");>;);
-  // This finds all nodes that have changed
-  // between the two given dates 
-  node._(changed:"2012-09-14T07:00:00Z","2012-09-14T07:01:00Z");
-  out;
+    (node(poly:"50.73 7.13 50.73 7.17 50.75 7.15");>;);
+    // This finds all nodes that have changed
+    // between the two given dates 
+    node._(changed:"2012-09-14T07:00:00Z","2012-09-14T07:01:00Z");
+    out;
 
 
 
@@ -408,26 +408,24 @@ Example: Find all cinemas in Bonn which are at most 100m away from bus stops
 
 The "item" filter selects all elements from its input set.
 
+    // get area Alpe and Cividale
+    (area[name="Cividale del Friuli"])->.Cividale;
+    (area[name="Julijske Alpe"])->.Alpe;
 
+    (node[power=pole](area.Cividale))->.Cividale_nodes;
+    (node[power=pole](area.Alpe))->.Alpe_nodes;
 
-  // get area Alpe and Cividale
-  (area[name="Cividale del Friuli"])->.Cividale;
-  (area[name="Julijske Alpe"])->.Alpe;
+    // print out nodes that are present in both areas (intersection)
+    node.Alpe_nodes.Cividale_nodes;
+    out body qt;
 
-  (node[power=pole](area.Cividale))->.Cividale_nodes;
-  (node[power=pole](area.Alpe))->.Alpe_nodes;
+    (relation[name="Cividale del Friuli"];>;);
+    out body;
+    out skel qt;
 
-  // print out nodes that are present in both areas (intersection)
-  node.Alpe_nodes.Cividale_nodes;
-  out body qt;
-
-  (relation[name="Cividale del Friuli"];>;);
-  out body;
-  out skel qt;
-
-  (relation[name="Julijske Alpe"];>;);
-  out body;
-  out skel qt;
+    (relation[name="Julijske Alpe"];>;);
+    out body;
+    out skel qt;
 
 
 
@@ -437,11 +435,11 @@ The "item" filter selects all elements from its input set.
 The newer filter selects all elements that have been changed since the given date
 
 
-  (node(poly:"50.73 7.13 50.73 7.17 50.75 7.15");>;);
-  // This finds all nodes that have changed
-  // since 14 Sep 2012, 7 h UTC, in the given input set.
-  (node._(newer:"2012-09-14T07:00:00Z");>;);
-  out;
+    (node(poly:"50.73 7.13 50.73 7.17 50.75 7.15");>;);
+    // This finds all nodes that have changed
+    // since 14 Sep 2012, 7 h UTC, in the given input set.
+    (node._(newer:"2012-09-14T07:00:00Z");>;);
+    out;
 
 
 
@@ -449,14 +447,12 @@ The newer filter selects all elements that have been changed since the given dat
 
 The _pivot_ filter selects the element of the chosen type that defines the outline of the given area.
 
-
-
-  // determine area for Greater London and store it to .London_area
-  area[name="London"][admin_level=6][boundary=administrative]->.London_area;
-  // convert back to relations using the pivot filter
-  rel(pivot.London_area);
-  // output the geom
-  out geom;
+    // determine area for Greater London and store it to .London_area
+    area[name="London"][admin_level=6][boundary=administrative]->.London_area;
+    // convert back to relations using the pivot filter
+    rel(pivot.London_area);
+    // output the geom
+    out geom;
 
 
 
@@ -476,14 +472,14 @@ The _polygon_ filter selects all elements of the chosen type inside the given bo
 The recurse filter selects all elements that are members of an element from the input set or have an element of the input set as member, depending on the given parameter.
 
 
-   node(w);        // select child nodes from all ways of the input set
-    node(r);        // select node members of relations of the input set
-    way(bn);        // select parent ways for all nodes from the input set
-    way(r);         // select way members of relations from the input set
-    rel(bn);        // select relations that have node members from the input set
-    rel(bw);        // select relations that have way members from the input set
-    rel(r);         // select all members of type relation from all relations of the input set
-    rel(br);        // select all parent relations of all relations from the input set
+      node(w);        // select child nodes from all ways of the input set
+      node(r);        // select node members of relations of the input set
+      way(bn);        // select parent ways for all nodes from the input set
+      way(r);         // select way members of relations from the input set
+      rel(bn);        // select relations that have node members from the input set
+      rel(bw);        // select relations that have way members from the input set
+      rel(r);         // select all members of type relation from all relations of the input set
+      rel(br);        // select all parent relations of all relations from the input set
 
 
 You can also restrict the recurse to a specific role. Just add a colon and then the name of the role before the closing parenthesis.
