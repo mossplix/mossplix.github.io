@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Moses Mugisha]]></title><description><![CDATA[Software Engineer, Machine Learning, GIS, Android  with nearly 10 years of tech industry experience]]></description><link>https://mmugisha.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 15 May 2019 19:19:17 GMT</lastBuildDate><item><title><![CDATA[Querying Openstreetmaps Using Overpass]]></title><description><![CDATA[The Overpass API is a powerful API that lets you query data from OpenStreetMap.This is a simple turorial to query and get data from openstreet maps]]></description><link>https://mmugisha.com/posts/querying-penstreetmaps-using-overpass/</link><guid isPermaLink="false">https://mmugisha.com/posts/querying-penstreetmaps-using-overpass/</guid><pubDate>Thu, 14 Mar 2019 11:46:37 GMT</pubDate><content:encoded>&lt;p&gt;The Overpass API is a powerful API that lets you query data from OpenStreetMap. You can find different places, routes to locations, and everything under the sun, quite literally! You can ‘talk’ to it and request data for your own specific use, using its own language, the “Overpass Query Language” (QL).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Moses Mugisha]]></title><description><![CDATA[Software Engineer, Machine Learning, GIS, Android  with nearly 10 years of tech industry experience]]></description><link>https://mmugisha.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 15 May 2019 19:53:23 GMT</lastBuildDate><item><title><![CDATA[Git Rebase]]></title><description><![CDATA[Git rebase jutsu ]]></description><link>https://mmugisha.com/posts/git-rebase/</link><guid isPermaLink="false">https://mmugisha.com/posts/git-rebase/</guid><pubDate>Tue, 14 May 2019 11:46:37 GMT</pubDate><content:encoded>&lt;p&gt;In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase. &lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Branch early, branch often&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;Say Dan and  Moses are working on the domains branch and  John is working on the master branch. Now, what we need to do is to integrate the changes that are on master into our branch.  If you have pushed your changes back into the remote branch, you should merge.&lt;/p&gt;
+&lt;p&gt;But, if you didn’t push yet, probably what you want to use is not a merge, probably it’s a rebase. Rebase is a way of changing the history and basically what the rebase does is it takes the changes that you have on your branch and reapplies on the top of the branch that you specified. &lt;/p&gt;
+&lt;p&gt;Rebasing enables fast-forward merges by moving a branch to the tip of another branch. It effectively eliminates the need for merge commits, resulting in a completely linear history.&lt;/p&gt;
+&lt;p&gt;Fast forward merges are merges that can be applied when the the current branch is the ancestor of the branch you want to merge. Fast forward merges simply move the ancestor’s hash to be the new master hash.&lt;/p&gt;
+&lt;h2 id=&quot;in-summary&quot;&gt;&lt;a href=&quot;#in-summary&quot; aria-label=&quot;in summary permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;In summary&lt;/h2&gt;
+&lt;p&gt;git rebase allows you to rewrite your history. It alters the repository so that the commits you can see before and after its usage are different. It can change, merge, split, add, remove, modify commits.&lt;/p&gt;
+&lt;p&gt;In case the changes are pushed upstream already and  you change history, you will break merges for EVERYONE that has already ‘pulled’ your branch. That’s why you only use rebase when you haven’t pushed your changes. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;NOTE: Don’t rebase if you have already pushed your changes upstream.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;simple-rules&quot;&gt;&lt;a href=&quot;#simple-rules&quot; aria-label=&quot;simple rules permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Simple Rules&lt;/h2&gt;
+&lt;p&gt;1.No commit should EVER be rebased if
+-fit is already public.
+- If you have already pushed it
+- If you have pulled or fetched it, or
+- You have merged it on a different branch&lt;/p&gt;
+&lt;p&gt;There are 2 types of rebases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Batch&lt;/li&gt;
+&lt;li&gt;Interactive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;batch-rebase&quot;&gt;&lt;a href=&quot;#batch-rebase&quot; aria-label=&quot;batch rebase permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;BATCH Rebase&lt;/h1&gt;
+&lt;p&gt;git rebase master
+Takes a branch, and modify it to make it look like the branch never existed, and the dev. Was done directly off another branch.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;A-B-C-D              master
+-E-F-G      topic&lt;/p&gt;
+&lt;p&gt;Becomes:&lt;/p&gt;
+&lt;p&gt;A-B-C-D-E’-F’-G’   master
+From ‘topic’ branch: ‘git rebase master’&lt;/p&gt;
+&lt;p&gt;git rebase does an actual merge and Merges may have conflict.  You have three choices&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1.  Solve the conflicts:
+      git add the resolved-files
+      git rebase –continue
+2.  Skip this commit
+      git rebase –skip
+3. Abort the rebase
+     git rebase --abort&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;change-tree-structure&quot;&gt;&lt;a href=&quot;#change-tree-structure&quot; aria-label=&quot;change tree structure permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Change Tree Structure&lt;/h2&gt;
+&lt;p&gt;You can also change the tree structure of your repository.&lt;/p&gt;
+&lt;p&gt;E.g: you have master, branch A forked from master, branch B forked from A&lt;/p&gt;
+&lt;p&gt;After: git rebase —onto master A B&lt;/p&gt;
+&lt;p&gt;Now, branch B is forked from the HEAD of master&lt;/p&gt;
+&lt;h2 id=&quot;delete-commits&quot;&gt;&lt;a href=&quot;#delete-commits&quot; aria-label=&quot;delete commits permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Delete Commits&lt;/h2&gt;
+&lt;p&gt;You  can delete commits:
+A-B-C-D-E-F      master
+git rebase —onto master~5 master~1 master
+A-E-F master&lt;/p&gt;
+&lt;h2 id=&quot;interactive-rebase&quot;&gt;&lt;a href=&quot;#interactive-rebase&quot; aria-label=&quot;interactive rebase permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Interactive Rebase&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;git rebase -i &amp;#x3C;commit/branch&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This will open an editor with the buffer&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  pick bdffc87 [some tag] Some commit
+  pick fed0f4c [game API] Another commit
+  pick 5df5842 [docs] [minor] Second! commit
+  pick 104c3c8 [data representation] First commit!
+
+  #
+  # Commands:
+  #  p, pick = use commit
+  #  r, reword = use commit, but edit the commit message
+  #  e, edit = use commit, but stop for amending
+  #  s, squash = use commit, but meld into previous commit
+  #  f, fixup = like &amp;quot;squash&amp;quot;, but discard this commit&amp;#39;s log message
+  #
+  # If you remove a line here THAT COMMIT WILL BE LOST.
+  # However, if you remove everything, the rebase will be aborted.
+  #&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you do nothing, or remove all the lines, nothing happens
+squash – This commit gets deleted, but its contents are added to the previous commit.  Commit messages are merged.
+fixup – Like squash, but the commit message gets lost
+reword – change the commit message
+edit – stop there to allow modifying the commit&lt;/p&gt;
+&lt;h2 id=&quot;useful-commands&quot;&gt;&lt;a href=&quot;#useful-commands&quot; aria-label=&quot;useful commands permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Useful Commands&lt;/h2&gt;
+&lt;p&gt;Pulling&lt;/p&gt;
+&lt;p&gt;git pull —rebase origin master  or git pull —rebase=interactive origin master&lt;/p&gt;
+&lt;p&gt;The local changes you made will be rebased on top of the remote changes&lt;/p&gt;
+&lt;p&gt;The interactive option gives you more control on the rebase process.&lt;/p&gt;
+&lt;p&gt;Documentation&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/&quot;&gt;https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Querying Openstreetmaps Using Overpass]]></title><description><![CDATA[The Overpass API is a powerful API that lets you query data from OpenStreetMap.This is a simple turorial to query and get data from openstreet maps]]></description><link>https://mmugisha.com/posts/querying-penstreetmaps-using-overpass/</link><guid isPermaLink="false">https://mmugisha.com/posts/querying-penstreetmaps-using-overpass/</guid><pubDate>Thu, 14 Mar 2019 11:46:37 GMT</pubDate><content:encoded>&lt;p&gt;The Overpass API is a powerful API that lets you query data from OpenStreetMap. You can find different places, routes to locations, and everything under the sun, quite literally! You can ‘talk’ to it and request data for your own specific use, using its own language, the “Overpass Query Language” (QL).&lt;/p&gt;
 &lt;p&gt;The Overpass API serves up custom selected parts of the OSM map data.&lt;/p&gt;
 &lt;p&gt; It acts as a database over the web: the client sends a query to the API and gets back the data set that corresponds to the query. &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://overpass-turbo.eu/&quot;&gt;https://overpass-turbo.eu/&lt;/a&gt;&lt;/p&gt;
