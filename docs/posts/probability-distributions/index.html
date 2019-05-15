@@ -40,361 +40,114 @@
         }
       }
     })
-  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Querying Openstreetmaps Using Overpass - Blog by Moses Mugisha</title><meta data-react-helmet="true" name="description" content="The Overpass API is a powerful API that lets you query data from OpenStreetMap.This is a simple turorial to query and get data from openstreet maps"/><link as="script" rel="preload" href="/1-a21cb2a265bc8e69ea8a.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-185b576fe8c73090b86a.js"/><link as="script" rel="preload" href="/0-5495c36a5388a40a52e9.js"/><link as="script" rel="preload" href="/app-b7270b54cdf110197922.js"/><link as="script" rel="preload" href="/webpack-runtime-e5b38a48e8f223ba9a6f.js"/><link as="fetch" rel="preload" href="/static/d/220/path---posts-querying-penstreetmaps-using-overpass-173-898-90qxIh3EicCqBe0uD4TmaxeD8jc.json" crossOrigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Querying Openstreetmaps Using Overpass</h1><div class="Content-module--content__body--2TrQ-"><p>The Overpass API is a powerful API that lets you query data from OpenStreetMap. You can find different places, routes to locations, and everything under the sun, quite literally! You can ‘talk’ to it and request data for your own specific use, using its own language, the “Overpass Query Language” (QL).</p>
-<p>The Overpass API serves up custom selected parts of the OSM map data.</p>
-<p> It acts as a database over the web: the client sends a query to the API and gets back the data set that corresponds to the query. </p>
-<p><a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a></p>
-<p><a
-    class="gatsby-resp-image-link"
-    href="/static/8a2325091baa1c4d7689ef3ba9773887/3a7e3/overpass-turbo.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 44.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABoUlEQVQoz42RC2/aMBSF+f//ZZvE1lUgxjMJIQkhT+dZEE1LyGACVWIrK+Sb0aZtnSqtVzqyryV/PtensS5XVOU95X1BtS5Zr9dUVUVZlmw2G7bbLfN5JpWSJwKR2CSRRxoJktglTTzmaUwWzshjQePrw57DbsPxsKf+/o2XanGbEs76FAuBHwwJXAXhTog9jdTTiYWFf6OTuhqN4+OR0/lM/etyXdfPJc/yRYA6eEMcqWSxQySmcm8SeArGymRUTmjtJdiXwNPp9DJI6kK7POVXPrY3xLSamNNrZtEYERpoK4PmVqNbWYgbFzEbSeDT02/gv+Cf/Zkkl8BggCI+oHlNlOgjtqNi+wMGfhsr08iFTRRMnjv8u/44PDNf+lhhj3H4HiV8S+/uHZ+qLsbSRFi6HF3HdUekdu8/wMsqgaK06H/u0C2a0ukVStGms1IZfrFwfJ1CfsGtDCVzX+HwEot+CBnvFDqHHu3dFZNlC0coEjjFzTWKdMwy0Yjc1iscnmuClYezHOPdOfQfVKxNn45M9fpxglGYTDODNLZZBCo/AN/dlBVsPlfxAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    ></span>
-    <img
-        class="gatsby-resp-image-image"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
-        alt="Overpass Turbo. Caption: “[Overpass Turbo](https://overpass-turbo.eu/)”"
-        title=""
-        src="/static/8a2325091baa1c4d7689ef3ba9773887/4bd34/overpass-turbo.png"
-        srcset="/static/8a2325091baa1c4d7689ef3ba9773887/fd8e7/overpass-turbo.png 240w,
-/static/8a2325091baa1c4d7689ef3ba9773887/ebc6a/overpass-turbo.png 480w,
-/static/8a2325091baa1c4d7689ef3ba9773887/4bd34/overpass-turbo.png 960w,
-/static/8a2325091baa1c4d7689ef3ba9773887/cc89c/overpass-turbo.png 1440w,
-/static/8a2325091baa1c4d7689ef3ba9773887/3a7e3/overpass-turbo.png 1920w"
-        sizes="(max-width: 960px) 100vw, 960px"
-      />
-  </span>
-  </a></p>
-<h2 id="osm-data-model"><a href="#osm-data-model" aria-label="osm data model permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OSM Data Model</h2>
-<p>All features in OSM are either nodes, polylines, polygons or relations </p>
+  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Probability Distributions - Blog by Moses Mugisha</title><meta data-react-helmet="true" name="description" content="My probability distribution notes"/><link as="script" rel="preload" href="/1-a21cb2a265bc8e69ea8a.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-185b576fe8c73090b86a.js"/><link as="script" rel="preload" href="/0-5495c36a5388a40a52e9.js"/><link as="script" rel="preload" href="/app-b7270b54cdf110197922.js"/><link as="script" rel="preload" href="/webpack-runtime-e5b38a48e8f223ba9a6f.js"/><link as="fetch" rel="preload" href="/static/d/502/path---posts-probability-distributions-2-e-5-75e-sxwllHaR4m3BmWI5AOnnTpw4Fn0.json" crossOrigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">Probability Distributions</h1><div class="Content-module--content__body--2TrQ-"><p>A probability model is a mathematical model used to fit a random process. Probabilistic models represent general domain knowledge as a probability distribution over all possible states. A model has two parts
+- Random variable
+- the random variable’s Probability Distribution</p>
+<p>The random variables can be discrete or continious</p>
+<p>Certain probability distributions occur with such regularity in real-life applications that they have been given their own names</p>
+<p>I will use WebPPL,  a small probabilistic programming language built on top of a (purely functional) subset of Javascript to explore some of them.</p>
+<h2 id="gaussiannormalbell-curve-distribution"><a href="#gaussiannormalbell-curve-distribution" aria-label="gaussiannormalbell curve distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gaussian/Normal/Bell Curve Distribution</h2>
+<p>The normal distribution is the most important distrib- ution in statistics, since it arises naturally in numerous applications. The key reason is that large sums of (small) random variables often turn out to be normally distributed</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">viz(Gaussian({mu: 0, sigma: 1}))</code></pre></div>
+<p>where mu is the mean and sigma the variance</p>
+<h2 id="binomial-distribution"><a href="#binomial-distribution" aria-label="binomial distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binomial Distribution</h2>
+<p>The bi in binomial is latin for two.  It is used to model a random experiment in which there are only two possible outcomes - success and failure.</p>
+<p> Imagine that you have the seven days of a week, and every day has a sunny element, which is flip(0.2). Now you want an element whose value is the number of sunny days in the week. This can be achieved by using the element Binomial(7, 0.2). The value of this element is the number of trials that come out true, when there are seven total trials and each trial has probability 0.2 of coming out true. You can use it as follows:</p>
+<p>In general, Binomial takes two arguments: the number of trials and the probability that each trial comes out true. The definition of Binomial assumes that the trials are independent; the first trial coming out true doesn’t change the probability that the second trial will come out true.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var bn = function() {
+  return binomial(0.2, 7);
+};
+
+var bdist = Infer({ model: bn })
+viz(bdist)</code></pre></div>
+<p>Examples of events that can be modelled as bionomial distribution</p>
 <ul>
-<li>Nodes – single point -geo coordinate + tags </li>
-<li>Polylines – an ordered list of nodes + tags (start and end node are different) </li>
-<li>Polygons – an ordered list of nodes + tags (start and end node are the same) </li>
-<li>Relations – a logical grouping of nodes, polylines and polygons + tags (example – country boundary)
-In OSM terminology the term WAY is used to describe either polylines or polygons</li>
+<li>The number of heads/tails in a sequence of coin flips</li>
+<li>Vote counts for two different candidates in an election</li>
+<li>The number of male/female employees in a company</li>
+<li>The number of accounts that are in compliance or not in compliance with an accounting procedure</li>
+<li>The number of successful sales calls</li>
+<li>The number of defective products in a production run</li>
+<li>The number of days in a month your company’s computer network experiences a problem</li>
 </ul>
-<p>Tagging is one of the most important aspects of OpenStreetMap
-Tagging in OpenStreetMap is very flexible. An object can have at minimum 1 attribute (tag) – and there is no upper limit.  There are no strict rules on how many attributes any object should have.</p>
-<p>This flexibility means that you must use your own judgement in regards to how many attributes you provide</p>
-<p>One tag is mandatory. In this case the most appropriate is amenity = toilets All the others are not mandatory</p>
-<p>All the tags can be found in taginfo, with statistical information: <a href="https://taginfo.openstreetmap.org/">https://taginfo.openstreetmap.org/</a></p>
-<hr>
-<p>I hope now you know everything about how openstreetmaps models its data. Lets now Dive in</p>
-<hr>
-<h2 id="overpass-query-language"><a href="#overpass-query-language" aria-label="overpass query language permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overpass Query Language</h2>
-<p>Overpass QL has a c like syntax and is imperative. A query is divided into statements and each statement is terminated by a semicolon</p>
-<h1 id="execution-state"><a href="#execution-state" aria-label="execution state permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execution state</h1>
-<p>The Overpass QL execution state consists of:</p>
+<h2 id="bernouli-distribution"><a href="#bernouli-distribution" aria-label="bernouli distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bernouli Distribution</h2>
+<p>This is a special case of Binomial distribution where only one trial is carried out.</p>
+<h2 id="multinomial--distribution"><a href="#multinomial--distribution" aria-label="multinomial  distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multinomial  Distribution</h2>
+<p>This generalisation  of Binomial distribution  whith multiple outcomes.</p>
+<h2 id="beta-distribution"><a href="#beta-distribution" aria-label="beta distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beta Distribution</h2>
+<p>The beta distribution is conjugate prior to the Bernoulli distribution. This means that if you have a Beta variable and a Bernoulli variable, and the Beta variable represents the probability that the Bernoulli variable comes out true, then conditioning the Beta variable on the outcome of the Bernoulli variable results in another Beta variable.</p>
+<p> It also means that if you have an unknown probability like the bias of a coin that you are estimating by repeated coin flips, then the likelihood induced on the unknown bias by a sequence of coin flips is beta-distributed.</p>
+<p>it represents all the possible values of a probability when we don’t know what that probability is.</p>
+<p>It’s time to look more closely at the two arguments of the Beta element. The first argument, called  , represents an imaginary number of heads you’ve already seen, plus 1. The second, called  , is the same thing for tails. In your example, you’re using Beta(2,5), meaning that you’re imagining having already seen one head and four tails even before learning. (By the way, the reason you add 1 to the number of heads and tails is mathematical convention; it makes the prediction of the next toss simple, as you’ll see in a couple of paragraphs.) This enables you to encode the fact that you have some prior beliefs about the bias even before seeing any data. If you have no prior beliefs, you can use Beta(1,1).</p>
+<p>Now, suppose you observe a toss that comes out heads. You increment   by 1 to get the posterior. Similarly, if the toss comes out tails, you increment   by 1. In general, if you observe h heads and t tails, you increment   by h and   by t. So if the prior is Beta(2, 5) and you observe three heads and two tails, the posterior is Beta(5,7). This is why the beta distribution is the conjugate prior of the Bernoulli distribution.
+It’s also easy to predict whether the next toss comes out heads when the bias is a beta distribution. The probability of this happening is   / (  +  ), so 5/12 for Beta(5,7).</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+  sample(Beta({a: 6, b: 2}));
+};
+
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="dirichlet-distribution"><a href="#dirichlet-distribution" aria-label="dirichlet distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dirichlet Distribution</h2>
+<p>The Dirichlet distribution is a generalization of the beta distribution into multiple dimensions. In this case , it is a conjugate prior for the multinomial distribution. i.e when the trial has multiple outcomes.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+  var x = dirichlet(Vector([.1, .2, .6]));
+  return T.sumreduce(T.range(x, 0, 2));
+};
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="uniform-distribution"><a href="#uniform-distribution" aria-label="uniform distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Uniform Distribution</h2>
+<p> every possible outcome has an equal chance, or likelihood, of occurring</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+ return uniform(2,10);
+};
+
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="paretobradford-distribution"><a href="#paretobradford-distribution" aria-label="paretobradford distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pareto/Bradford distribution</h2>
+<p>In the 1890s, Vilfredo Pareto studied income tax data from several countries. He plotted the number of people earning an income above a certain threshold against the respec- tive threshold on double logarithmic paper and revealed a linear relationship. The corresponding income distribution was more skewed and heavy-tailed than bell-shaped curves: Pareto felt that he had discovered a new type of “universal law” that was the result of underlying economic mechanisms. Since then, Pareto’s discovery has been con- firmed and generalized to the distribution of firm size (Axtell (2001)) and wealth, which also follow Pareto distributions in the upper tail.</p>
+<h2 id="exponential"><a href="#exponential" aria-label="exponential permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exponential</h2>
+<p>The exponential distribution is typically used to model time intervals between “random events”.</p>
 <ul>
-<li>the default set _ (a single underscore)</li>
-<li>other named sets, if created by the user</li>
-<li>a stack, during the execution of Overpass QL block statements</li>
+<li>The length of time between telephone calls</li>
+<li>The length of time between arrivals at a service station</li>
+<li>The life time of electronic components, i.e., an inter- failure time</li>
 </ul>
-<h1 id="statements"><a href="#statements" aria-label="statements permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>statements</h1>
-<p>Statements are evaluated sequentially and change the execution state according to their semantics.</p>
-<p>There are several different types of statement. You almost always need the print statement, which is called an action, because it has an effect outside the execution state (the output). The other statements are grouped into</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+  return exponential(2);
+};
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="poisson-distribution"><a href="#poisson-distribution" aria-label="poisson distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Poisson Distribution</h2>
+<p>It usually is applicable in situations where random “events” occur at a certain rate over a period of time.</p>
+<p>Examples of events that can be modelled as poisson distribution</p>
 <ul>
-<li>Standalone queries: These are complete statements on their own. </li>
-<li>Filters: They are always part of a query statement and contain the interesting selectors and filters. Block statements: They group statements and enable disjunctions as well as loops. </li>
-<li>Settings: Things like output format that can be set once at the beginning.</li>
+<li>The hourly number of customers arriving at a bank</li>
+<li>The daily number of accidents on a particular stretch of highway</li>
+<li>The hourly number of accesses to a particular web server</li>
+<li>The daily number of emergency calls in Dallas</li>
+<li>The number of typos in a book</li>
+<li>The monthly number of employees who had an ab- sence in a large company</li>
+<li>Monthly demands for a particular product</li>
 </ul>
-<h1 id="sets"><a href="#sets" aria-label="sets permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sets</h1>
-<p>Overpass QL manipulates sets. Statements write their results into sets, and sets are then read by subsequent statements as input. An Overpass QL set can contain any combination of – and any number of – OpenStreetMap nodes, ways, relations, and area elements.</p>
-<p>Unless you specify a named set as an input or result, all input is implicitly read from (and all results are written to) the default set named _ (a single underscore). Once a new result is (implicitly or explicitly) assigned to an existing set, its previous contents will be replaced and are no longer available. Overpass QL sets always have global scope (visibility).</p>
-<h1 id="1-block-queries"><a href="#1-block-queries" aria-label="1 block queries permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Block Queries</h1>
-<h2 id="11-difference"><a href="#11-difference" aria-label="11 difference permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1 Difference</h2>
-<p>The difference block statement is written as a pair of parentheses. Inside the difference statement, exactly two statements must be placed, and between them a minus sign.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(statement_1; - statement_2;)[-&gt;.result_set];</code></pre></div>
-<p>It takes no input set. It produces a result set. Its result set contains all elements that are result of the first sub-statement and not contained in the result of the second sub-statement.</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node[name=&quot;Foo&quot;]; - node(50.0,7.0,51.0,8.0););</code></pre></div>
-<p>This collects all nodes that have a name tag “Foo” but are not inside the given bounding box.</p>
-<p>The result set of the difference statement can be redirected with the usual postfix notation:</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node[name=&quot;Foo&quot;]; - node(50.0,7.0,51.0,8.0);)-&gt;.a;</code></pre></div>
-<p>Same as the preceding example, but the result is written into the variable a.</p>
-<p>  (
-node<a href="47.06,%2015.435,%20%2047.07,%20%2015.44">amenity</a>;
--node<a href="47.064,%2015.435,%2047.066,%2015.44">amenity</a>;
-);
-out;</p>
-<h2 id="12-for-each-loop-foreach"><a href="#12-for-each-loop-foreach" aria-label="12 for each loop foreach permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2 For-each loop (foreach)</h2>
-<p>The foreach statement loops over the content of the input set, once for every element in the input set.</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">foreach.a(...);</code></pre></div>
-<p>This loops over the content of set a instead of the default set ”_“.</p>
-<p>The name of the variable to put the loop element into can also be chosen by adding a postfix immediately before the opening parenthese.</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">foreach-&gt;.b(...);</code></pre></div>
-<p>This puts the element to loop over into the variable b. Without it, the foreach statement does not puts the elements into any set. Example for both input and loop set changed:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">foreach.a-&gt;.b(...);
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+  return poisson(4);
+};
 
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="gamma-distribution"><a href="#gamma-distribution" aria-label="gamma distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gamma Distribution</h2>
+<p>Gamma distribution is a generalization of exponential distribution.</p>
+<p>It arises naturally in processes for which the waiting times between Poisson distributed events are relevant.</p>
+<p>e.g when we want to know when the rth customer will arrive at the bank</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var model = function() {
+  sample(Gamma({shape: 12, scale: 1 / 8}));
+};
 
-// get all bank nodes in coordinates
-(
-  node[amenity=bank]
-  (47.0678,15.4401658,47.069,15.4501658);
-  &gt;;
-);
-// foreach bank node, print out adjacent nodes
-foreach-&gt;.bank_set(
-  node(around.bank_set:15)-&gt;.adjacent_set;
-  (.adjacent_set);
-  out meta;
-);</code></pre></div>
-<h2 id="13-union"><a href="#13-union" aria-label="13 union permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.3 Union</h2>
-<p>The union block statement is written as a pair of parentheses. Inside the union, any sequence of statements can be placed, including nested union and foreach statements.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(statement_1; statement_2; …)[-&gt;.result_set];</code></pre></div>
-<p>It takes no input set. It produces a result set. Its result set is the union of the result sets of all sub-statements, regardless of whether a sub-statement has a redirected result set or not.</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node[name=&quot;Foo&quot;];way[name=&quot;Foo&quot;];);</code></pre></div>
-<p>This collects in the first statement all nodes that have a name tag “Foo” and in the second statement all ways that have a name tag “Foo”. After the union statement, the result set is the union of the result sets of both statements.</p>
-<p>The result set of the union statement can be redirected with the usual postfix notation:</p>
-<p>Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node[name=&quot;Foo&quot;];way[name=&quot;Foo&quot;];)-&gt;.a;</code></pre></div>
-<p>Same as the preceding example, but the result is written into the variable a.</p>
-<p>Note: foreach and print statements cannot be subelement of element union.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(
-node
-  [amenity=drinking_water]
-  (47.06,15.42,47.09,15.48);
-node
-  [tourism=hotel]
-  (47.06,15.42,47.09,15.48);
-);
-out;</code></pre></div>
-<h1 id="2-standalone-queries"><a href="#2-standalone-queries" aria-label="2 standalone queries permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 Standalone Queries</h1>
-<h2 id="21-item"><a href="#21-item" aria-label="21 item permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.1 Item</h2>
-<p>The item standalone query consists only of an input set prefix.</p>
-<p>It takes the input set specified by its prefix. This is in particular useful for union statements: it reproduces its input set as (part of the) result of the union statement.</p>
-<p>The most common usage is the usage with the default input set:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  ._;</code></pre></div>
-<p>In the context of a union statement, the following will return all items in the default inputset along with the recurse down result.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  (._; &gt;;);</code></pre></div>
-<p>But of course other sets are possible too:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  .a;</code></pre></div>
-<p>In the context of a union statement:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  (.a; .a &gt;;);</code></pre></div>
-<p>Note: Subsequent statements in a union statement are not impacted by the item statement. In particular <code class="language-text">.a;</code> does not add the contents of the input set to the default item set ._</p>
-<p>The item statement can also be used as filter.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node[amenity=bank]
-  (47.06,15.42,47.09,15.48);
-)-&gt;.bank_set;
-
-//here we print the bank_set by passing the .bank_set query
-.bank_set out;</code></pre></div>
-<h1 id="3-actions"><a href="#3-actions" aria-label="3 actions permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 Actions</h1>
-<h3 id="print-out"><a href="#print-out" aria-label="print out permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Print (out)</h3>
-<p>The out action can be configured with an arbitrary number of parameters that are appended, separated by whitespace, between the word out and the semicolon.</p>
-<p>The out action takes an input set. It doesn’t return a result set. The input set can be changed by prepending the variable name.</p>
-<p>Allowed values, in any order, are:</p>
-<ul>
-<li>
-<p>one of the following the degree of verbosity; default is body:</p>
-<ul>
-<li><em>ids</em>: Print only the ids of the elements.</li>
-<li><em>skel</em>: Print also the information necessary for geometry. These are also coordinates for nodes and way and relation member ids for ways and relations.</li>
-<li><em>body</em>: Print all information necessary to use the data. These are also tags for all elements and the roles for relation members.</li>
-<li><em>tags</em>: Print only ids and tags for each element and not coordinates or members.</li>
-<li><a href="#docs-tab-meta"><em>meta</em></a>: Print everything known about the elements. This includes additionally to body for all elements the version, changeset id, timestamp and the user data of the user that last touched the object.</li>
-</ul>
-</li>
-<li>
-<p>one of the following modificators for derived information:</p>
-<ul>
-<li><a href="#docs-tab-bounding_box"><em>bb</em></a>: Adds the bounding box of each element to the element. For nodes this is equivalent to “geom”. For ways it is the enclosing bounding box of all nodes. For relations it is the enclosing bounding box of all node and way members, relations as members have no effect.</li>
-<li><a href="#docs-tab-center"><em>center</em></a>: This adds the center of the above mentioned bounding box to ways and relations. Note: The center point is not guaranteed to lie inside the polygon (example).</li>
-<li><em>geom</em>: Add the full geometry to each object. This adds coordinates to each node, to each node member of a way or relation, and it adds a sequence of “nd” members with coordinates to all relations.</li>
-</ul>
-</li>
-</ul>
-<p>The attribute “geom” can be followed by a bounding box in the format “(south,west,north,east)“. In this case only coordinates that are inside the bounding box are produced. For way segments also the first coordinate outside the bounding box is produced to allow for properly formed segments.</p>
-<ul>
-<li>
-<p>One of the following for the sort order can be added. Default is asc.</p>
-<ul>
-<li>asc: Sort by object id.</li>
-<li>qt: Sort by quadtile index; this is roughly geographical and significantly faster than order by ids.</li>
-</ul>
-</li>
-<li>a non-negative integer for the maximum number of elements to print. Default is no limit.</li>
-</ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  node[name=Corcovado][natural=peak];
-  &gt;;
-);
-out;
-===meta===
-(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  node[name=Corcovado][natural=peak];
-  &gt;;
-);
-out meta;
-===bounding box===
-(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  way(141708228);
-  &gt;;
-);
-out bb;
-===limit===
-(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  way(141708228);
-  &gt;;
-);
-// only print 20 nodes from the way 
-out 20;
-===center===
-(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  way(141708228);
-  &gt;;
-);
-// print center (not centroid) of the polygon
-out center;
-===combination===
-(
-  // Rio de Janeiro&#39;s Christ the Redeemer peak
-  way(141708228);
-  &gt;;
-);
-// print multiple times using different modifiers
-out geom;
-out center;
-out bb;</code></pre></div>
-<h1 id="filters"><a href="#filters" aria-label="filters permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filters</h1>
-<h2 id="bounding-box"><a href="#bounding-box" aria-label="bounding box permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bounding Box</h2>
-<p>The bbox-query filter selects all elements within a certain bounding box.</p>
-<p>It has no input set. As for all filters, the result set is specified by the whole statement, not the individual filter.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(south,west,north,east)
-
-
-{{&lt; docs_repl &gt;}}</code></pre></div>
-<p>node
-(47.065,15.425,47.07,15.43); // a bbox-filter
-out;
-{{&#x3C; /docs_repl >}}</p>
-<h2 id="by-element-id"><a href="#by-element-id" aria-label="by element id permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By Element Id</h2>
-<p>The id-query filter selects the element of given type with given id.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// get node with id 1170494282
-// put it (implicitly) in the default set
-node(1170494282);
-// print the default set
-out;</code></pre></div>
-<h2 id="by-area-area"><a href="#by-area-area" aria-label="by area area permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By area (area)</h2>
-<p>The area filter selects all elements of the chosen type that are inside the given area.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// search the area of the Dolmites
-area
-  [place=region]
-  [&quot;region:type&quot;=&quot;mountain_area&quot;]
-  [&quot;name:en&quot;=&quot;Dolomites&quot;];
-out body;
-
-// get all peaks in the area
-node
-  [natural=peak]
-  (area);
-out body qt;</code></pre></div>
-<h2 id="by-tag"><a href="#by-tag" aria-label="by tag permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By Tag</h2>
-<p>The has-kv filter selects all elements that have or have not a tag with a certain value. It supports the basic OSM types node, way, and relation as well as the extended type area.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node[&quot;name&quot;~&quot;^Foo$&quot;];    /* finds exactly &quot;Foo&quot; */
-node[&quot;name&quot;~&quot;^Foo&quot;];     /* finds anything that starts with &quot;Foo&quot; */
-node[&quot;name&quot;~&quot;Foo$&quot;];     /* finds anything that ends with &quot;Foo&quot; */
-node[&quot;name&quot;~&quot;Foo&quot;];      /* finds anything that contains the substring &quot;Foo&quot; */
-node[&quot;name&quot;~&quot;.&quot;];        /* finds anything, equal to the previous variant */</code></pre></div>
-<h2 id="by-date-of-change-changed"><a href="#by-date-of-change-changed" aria-label="by date of change changed permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By date of change (changed)</h2>
-<p>The changed filter selects all elements that have been changed between the two given dates.</p>
-<p>Example: All changes since the given date and now</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node._(changed:&quot;2012-09-14T07:00:00Z&quot;);</code></pre></div>
-<p>Another Example:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node(poly:&quot;50.73 7.13 50.73 7.17 50.75 7.15&quot;);&gt;;);
-// This finds all nodes that have changed
-// between the two given dates 
-node._(changed:&quot;2012-09-14T07:00:00Z&quot;,&quot;2012-09-14T07:01:00Z&quot;);
-out;</code></pre></div>
-<h2 id="relative-to-other-elements-around"><a href="#relative-to-other-elements-around" aria-label="relative to other elements around permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Relative to other elements (around)</h2>
-<p>The around filter selects all elements within a certain radius around the elements in the input set</p>
-<p>Example: Find all cinemas in Bonn which are at most 100m away from bus stops</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">area[name=&quot;Bonn&quot;];
-node(area)[highway=bus_stop];
-node(around:100)[amenity=cinema];
-out;</code></pre></div>
-<h2 id="by-input-set"><a href="#by-input-set" aria-label="by input set permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By Input Set</h2>
-<p>The “item” filter selects all elements from its input set.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// get area Alpe and Cividale
-(area[name=&quot;Cividale del Friuli&quot;])-&gt;.Cividale;
-(area[name=&quot;Julijske Alpe&quot;])-&gt;.Alpe;
-
-(node[power=pole](area.Cividale))-&gt;.Cividale_nodes;
-(node[power=pole](area.Alpe))-&gt;.Alpe_nodes;
-
-// print out nodes that are present in both areas (intersection)
-node.Alpe_nodes.Cividale_nodes;
-out body qt;
-
-(relation[name=&quot;Cividale del Friuli&quot;];&gt;;);
-out body;
-out skel qt;
-
-(relation[name=&quot;Julijske Alpe&quot;];&gt;;);
-out body;
-out skel qt;</code></pre></div>
-<h2 id="newer"><a href="#newer" aria-label="newer permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>newer</h2>
-<p>The newer filter selects all elements that have been changed since the given date</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(node(poly:&quot;50.73 7.13 50.73 7.17 50.75 7.15&quot;);&gt;;);
-// This finds all nodes that have changed
-// since 14 Sep 2012, 7 h UTC, in the given input set.
-(node._(newer:&quot;2012-09-14T07:00:00Z&quot;);&gt;;);
-out;</code></pre></div>
-<h2 id="area-pivot-pivot"><a href="#area-pivot-pivot" aria-label="area pivot pivot permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Area pivot (pivot)</h2>
-<p>The <em>pivot</em> filter selects the element of the chosen type that defines the outline of the given area.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// determine area for Greater London and store it to .London_area
-area[name=&quot;London&quot;][admin_level=6][boundary=administrative]-&gt;.London_area;
-// convert back to relations using the pivot filter
-rel(pivot.London_area);
-// output the geom
-out geom;</code></pre></div>
-<h2 id="by-polygon-poly"><a href="#by-polygon-poly" aria-label="by polygon poly permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>By polygon (poly)</h2>
-<p>The <em>polygon</em> filter selects all elements of the chosen type inside the given bounding box.</p>
-<p>  (node(poly:“50.73 7.13 50.73 7.17 50.75 7.15”);>;);
-out;</p>
-<h2 id="recurse-n-w-r-bn-bw-br"><a href="#recurse-n-w-r-bn-bw-br" aria-label="recurse n w r bn bw br permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recurse (n, w, r, bn, bw, br)</h2>
-<p>The recurse filter selects all elements that are members of an element from the input set or have an element of the input set as member, depending on the given parameter.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  node(w);        // select child nodes from all ways of the input set
-  node(r);        // select node members of relations of the input set
-  way(bn);        // select parent ways for all nodes from the input set
-  way(r);         // select way members of relations from the input set
-  rel(bn);        // select relations that have node members from the input set
-  rel(bw);        // select relations that have way members from the input set
-  rel(r);         // select all members of type relation from all relations of the input set
-  rel(br);        // select all parent relations of all relations from the input set</code></pre></div>
-<p>You can also restrict the recurse to a specific role. Just add a colon and then the name of the role before the closing parenthesis.</p>
-<p>Examples with default input set:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node(r:&quot;role&quot;);        // select node members of relations of the input set
-way(r:&quot;role&quot;);         // select way members of relations from the input set
-rel(bn:&quot;role&quot;);        // select relations that have node members from the input set
-rel(bw:&quot;role&quot;);        // select relations that have way members from the input set
-rel(r:&quot;role&quot;);         // select all members of type relation from all relations of the input set
-rel(br:&quot;role&quot;);        // select all parent relations of all relations from the input set
-Example with modified input set:
-
-node(r.foo:&quot;role&quot;);</code></pre></div>
-<p>And you can also search explicitly for empty roles:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node(r:&quot;&quot;);
-node(r.foo:&quot;&quot;);</code></pre></div></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->14 Mar 2019</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/openstreetmaps/">openstreetmaps</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/gis/">gis</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/overpass/">overpass</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Programmer, Machine Learning Engineer with nearly 10 years of tech industry experience<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/mossplix" rel="noopener noreferrer" target="_blank"><strong>Moses Mugisha</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div></div><script>
+var dist = Infer({ model: model })
+viz(dist)</code></pre></div>
+<h2 id="chi-square-distribution"><a href="#chi-square-distribution" aria-label="chi square distribution permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chi-Square Distribution</h2>
+<p> Basically chi-square distribution is the measure of which enables us to find out the degree of degree of discrepancy between the observed and expected frequencies to determine whether the discrepancy between the observed and expected frequencies is due to error of sampling or due to chance.</p>
+<p> he χ2 distribution is used for testing the goodness of fit. It is used for finding association and relation between attributes. It is also used to test the homogeneity of independent estimates of population. Chi-square is computed on the basis of frequencies in a sample and the value of χ2 so obtained is a statistic.</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->2 Jan 2018</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/probability-distributions/">probability distributions</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/web-ppl/">WebPPL</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Programmer, Machine Learning Engineer with nearly 10 years of tech industry experience<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/mossplix" rel="noopener noreferrer" target="_blank"><strong>Moses Mugisha</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div></div><script>
   
   
   if(true) {
@@ -409,4 +162,4 @@ node(r.foo:&quot;&quot;);</code></pre></div></div></div></div><div class="Post-m
       
       
       }
-      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-template-js","jsonName":"posts-querying-penstreetmaps-using-overpass-173","path":"/posts/querying-penstreetmaps-using-overpass/"};window.dataPath="220/path---posts-querying-penstreetmaps-using-overpass-173-898-90qxIh3EicCqBe0uD4TmaxeD8jc";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.d0fea597d3c0db18965c.css","/app-b7270b54cdf110197922.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-93e968e729fa3c90b6f7.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js.8e75ba940573efa951cf.css","/component---src-templates-not-found-template-js-7e162ca130fb7ee432e1.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-07f22584535580232686.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-134288fdf4d2d299ce41.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js.b241a010cc1fc23b10a5.css","/component---src-templates-page-template-js-5c06b1a5830203fffe6d.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js.a632967b3305f69e8126.css","/component---src-templates-post-template-js-185b576fe8c73090b86a.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-964eda92eea3fb119d00.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-1f845e4e2d858fe565df.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-837d8b93db4d797a2b4d.js"],"pages-manifest":["/pages-manifest-d65e65033346b8a88749.js"]};/*]]>*/</script><script src="/webpack-runtime-e5b38a48e8f223ba9a6f.js" async=""></script><script src="/app-b7270b54cdf110197922.js" async=""></script><script src="/0-5495c36a5388a40a52e9.js" async=""></script><script src="/component---src-templates-post-template-js-185b576fe8c73090b86a.js" async=""></script><script src="/1-a21cb2a265bc8e69ea8a.js" async=""></script></body></html>
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-template-js","jsonName":"posts-probability-distributions-2e5","path":"/posts/probability-distributions/"};window.dataPath="502/path---posts-probability-distributions-2-e-5-75e-sxwllHaR4m3BmWI5AOnnTpw4Fn0";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.d0fea597d3c0db18965c.css","/app-b7270b54cdf110197922.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-93e968e729fa3c90b6f7.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js.8e75ba940573efa951cf.css","/component---src-templates-not-found-template-js-7e162ca130fb7ee432e1.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-07f22584535580232686.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-134288fdf4d2d299ce41.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js.b241a010cc1fc23b10a5.css","/component---src-templates-page-template-js-5c06b1a5830203fffe6d.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js.a632967b3305f69e8126.css","/component---src-templates-post-template-js-185b576fe8c73090b86a.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-964eda92eea3fb119d00.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-1f845e4e2d858fe565df.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-837d8b93db4d797a2b4d.js"],"pages-manifest":["/pages-manifest-d65e65033346b8a88749.js"]};/*]]>*/</script><script src="/webpack-runtime-e5b38a48e8f223ba9a6f.js" async=""></script><script src="/app-b7270b54cdf110197922.js" async=""></script><script src="/0-5495c36a5388a40a52e9.js" async=""></script><script src="/component---src-templates-post-template-js-185b576fe8c73090b86a.js" async=""></script><script src="/1-a21cb2a265bc8e69ea8a.js" async=""></script></body></html>
